@@ -1,6 +1,13 @@
+using Foodie.Application.Configurations;
+using Foodie.Infrastructure.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 {
+    builder.Services
+    .RegisterInfrastructure()
+    .RegisterServices();
     builder.Services.AddControllers();
+
 }
 
 
